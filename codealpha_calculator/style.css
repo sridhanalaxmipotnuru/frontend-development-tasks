@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #141e30,
+        #243b55
+    );
+}
+
+.calculator-container {
+    text-align: center;
+}
+
+.calculator-container h1 {
+    color: white;
+
+    margin-bottom: 20px;
+
+    font-size: 36px;
+}
+
+.calculator {
+    width: 360px;
+
+    padding: 20px;
+
+    background: #1c1c1c;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Display */
+
+.display {
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.display input {
+    width: 100%;
+
+    height: 80px;
+
+    padding: 10px 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #eeeeee;
+
+    color: #222;
+
+    font-size: 32px;
+
+    text-align: right;
+
+    outline: none;
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+button {
+    height: 65px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #333;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+
+    background: #444;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* Operators */
+
+.operator {
+    background: #243b55;
+}
+
+.operator:hover {
+    background: #31516f;
+}
+
+
+/* Clear */
+
+.clear {
+    background: #8b1e1e;
+}
+
+.clear:hover {
+    background: #a52a2a;
+}
+
+
+/* Zero button */
+
+.zero {
+    grid-column: span 2;
+}
+
+
+/* Equals */
+
+.equals {
+    background: #1f7a4d;
+}
+
+.equals:hover {
+    background: #28945e;
+}
+
+
+/* Footer */
+
+.footer-text {
+    color: white;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .calculator {
+        width: 90vw;
+
+        padding: 15px;
+    }
+
+    .display input {
+        font-size: 26px;
+    }
+
+    button {
+        height: 58px;
+
+        font-size: 20px;
+    }
+
+}

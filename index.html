@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeAlpha Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>My Image Gallery</h1>
+            <p>CodeAlpha Frontend Development Task 1</p>
+        </div>
+    </header>
+
+    <!-- Gallery -->
+    <main class="container">
+
+        <section class="gallery-section">
+
+            <h2>Explore My Gallery</h2>
+            <div class="filter-buttons">
+    <button class="filter-btn active" onclick="filterImages('all')">
+        All
+    </button>
+
+    <button class="filter-btn" onclick="filterImages('nature')">
+        Nature
+    </button>
+
+    <button class="filter-btn" onclick="filterImages('beach')">
+        Beach
+    </button>
+
+    <button class="filter-btn" onclick="filterImages('city')">
+        City
+    </button>
+
+    <button class="filter-btn" onclick="filterImages('flower')">
+        Flowers
+    </button>
+</div>
+
+            <div class="gallery">
+
+    <!-- Image 1 - Nature -->
+    <div class="gallery-item" data-category="nature">
+        <img src="images/image1.jpg"
+             alt="Mountain Lake"
+             onclick="openLightbox(0)">
+    </div>
+
+    <!-- Image 2 - Beach -->
+    <div class="gallery-item" data-category="beach">
+        <img src="images/image2.jpg"
+             alt="Beach Sunset"
+             onclick="openLightbox(1)">
+    </div>
+
+    <!-- Image 3 - Nature -->
+    <div class="gallery-item" data-category="nature">
+        <img src="images/image3.jpg"
+             alt="Waterfall"
+             onclick="openLightbox(2)">
+    </div>
+
+    <!-- Image 4 - Nature -->
+    <div class="gallery-item" data-category="nature">
+        <img src="images/image4.jpg"
+             alt="Mountain Road"
+             onclick="openLightbox(3)">
+    </div>
+
+    <!-- Image 5 - Nature -->
+    <div class="gallery-item" data-category="nature">
+        <img src="images/image5.jpg"
+             alt="Village Landscape"
+             onclick="openLightbox(4)">
+    </div>
+
+    <!-- Image 6 - Flower -->
+    <div class="gallery-item" data-category="flower">
+        <img src="images/image6.jpg"
+             alt="Pink Flower"
+             onclick="openLightbox(5)">
+    </div>
+
+    <!-- Image 7 - City -->
+    <div class="gallery-item" data-category="city">
+        <img src="images/image7.jpg"
+             alt="City Skyline"
+             onclick="openLightbox(6)">
+    </div>
+
+    <!-- Image 8 - Nature -->
+    <div class="gallery-item" data-category="nature">
+        <img src="images/image8.jpg"
+             alt="Night Sky"
+             onclick="openLightbox(7)">
+    </div>
+
+</div>
+        </section>
+
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+
+        <button class="close" onclick="closeLightbox()">
+            &times;
+        </button>
+
+        <button class="prev" onclick="changeImage(-1)">
+            &#10094;
+        </button>
+
+        <div class="lightbox-content">
+
+            <img id="lightbox-image" src="" alt="Full Size Image">
+
+            <p id="image-counter"></p>
+
+        </div>
+
+        <button class="next" onclick="changeImage(1)">
+            &#10095;
+        </button>
+
+    </div>
+
+    <footer>
+        <p>© 2026 CodeAlpha Image Gallery</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
